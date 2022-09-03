@@ -1,20 +1,22 @@
-# Project Data Mining
+# Introduction
 
-## Ini merupakan Buku Project saya dari mata kuliah Data Mining Teknik Informatika UTM
+## Project Data Mining
+
+<p>Ini merupakan Buku Project saya dari mata kuliah Data Mining Teknik Informatika UTM</p>
 
 <p>
-	Data Diri :<br>
+	<h2>Data Diri</h2>
 	Nama    : Yoga Tirta Permana<br>
 	NIM     : 200411100142<br>
 	Kelas   : Data Mining A
 </p>
 
 <section class="tex2jax_ignore mathjax_ignore" id="apa-sih-data-mining-itu">
-<h1><strong>Data Mining</strong><a class="headerlink" href="#" title="Permalink to this headline">#</a></h1>
+<h1><strong>Apa Itu Data Mining?</strong><a class="headerlink" href="#" title="Permalink to this headline">#</a></h1>
 <blockquote>
 <div>
 <p>
-proses pengumpulan data atau informasi penting melalui sebuah data dalam jumlah besar (big data). Proses pengumpulan tersebut seringkali memanfaatkan metode matematika, statistika, hingga pemanfaatan teknologi artificial intelligence (AI).
+<b>Data Mining</b> proses pengumpulan data atau informasi penting melalui sebuah data dalam jumlah besar (big data). Proses pengumpulan tersebut seringkali memanfaatkan metode matematika, statistika, hingga pemanfaatan teknologi artificial intelligence (AI).
 <a class="reference external" href="https://inmarketing.id/data-mining-adalah.html">Source</a>
 </p>
 </div>
@@ -42,7 +44,3 @@ Ada banyak fungsi atau manfaat yang bisa Anda dapatkan dengan menerapkan data mi
   </a>
 </p>
 </section>
-
-```{tableofcontents}
-
-```

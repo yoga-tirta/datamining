@@ -1,8 +1,7 @@
 # Project Data Mining
 
-<h1 align="center"> Hello, there! </h1>
+## Ini merupakan Buku Project saya dari mata kuliah Data Mining Teknik Informatika UTM
 
-<p>Ini merupakan Buku Project dari mata kuliah Data Mining Teknik Informatika UTM</p>
 <p>
 	Data Diri :<br>
 	Nama    : Yoga Tirta Permana<br>
@@ -30,8 +29,8 @@ Ada banyak fungsi atau manfaat yang bisa Anda dapatkan dengan menerapkan data mi
 </div>
 </blockquote>
 
-Connect with me
 <p>
+	<h2>Connect with me</h2>
   <a href="https://twitter.com/yogatirtap_">
     <img src="https://img.shields.io/twitter/follow/yogatirtap_?style=for-the-badge&label=%40yogatirtap_&logo=twitter&logoColor=00AEFF&labelColor=black&color=7fff00">
   </a>
@@ -42,10 +41,6 @@ Connect with me
     <img src="https://img.shields.io/badge/yogatirtapermana552@gmail.com-0078D4?style=for-the-badge&logo=Microsoft-Outlook&logoColor=00AEFF&labelColor=black&color=black">
   </a>
 </p>
-<p>Follow <a class="reference external" href="https://www.instagram.com/fiqry.diky/">My Instagram</a></p>
-<p>E-mail <a> fiqridiky01@gmail.com</a></p>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
 ```{tableofcontents}

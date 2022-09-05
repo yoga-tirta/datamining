@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Statistik Deskrit &#8212; Data Mining Project</title>
+    <title>2. Deskritisasi &#8212; Data Mining Project</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Deskritisasi" href="tugas2.html" />
-    <link rel="prev" title="Introduction" href="intro.html" />
+    <link rel="prev" title="1. Statistik Deskrit" href="tugas1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,13 +113,13 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas1.html">
    1. Statistik Deskrit
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas2.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    2. Deskritisasi
   </a>
  </li>
@@ -183,7 +182,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/drive/1XgOJxyXibAUEmK0of43c9ks4Wk2GdU1t#scrollTo=8x8JM1_KGpiH/github/yoga-tirta/datamining/blob/master/docs/tugas1.ipynb"
+        <a href="https://colab.research.google.com/drive/1XgOJxyXibAUEmK0of43c9ks4Wk2GdU1t#scrollTo=8x8JM1_KGpiH/github/yoga-tirta/datamining/blob/master/docs/tugas2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -243,7 +242,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/yoga-tirta/datamining/issues/new?title=Issue%20on%20page%20%2Ftugas1.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/yoga-tirta/datamining/issues/new?title=Issue%20on%20page%20%2Ftugas2.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -271,7 +270,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/tugas1.ipynb"
+        <a href="_sources/tugas2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -383,7 +382,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>1. Statistik Deskrit</h1>
+                <h1>2. Deskritisasi</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -447,14 +446,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="statistik-deskrit">
-<h1>1. Statistik Deskrit<a class="headerlink" href="#statistik-deskrit" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="deskritisasi">
+<h1>2. Deskritisasi<a class="headerlink" href="#deskritisasi" title="Permalink to this headline">#</a></h1>
 <section id="membaca-data-dari-url">
 <h2><strong>1. Membaca Data Dari URL</strong><a class="headerlink" href="#membaca-data-dari-url" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import Dataset</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/dragracer/rpdr_contestants.csv&quot;</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
@@ -469,7 +467,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f2b277b1-a07f-423f-b9f4-48254fe35856">
+  <div id="df-71f64978-f712-48e6-aa9e-ace02cc594ba">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -591,7 +589,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f2b277b1-a07f-423f-b9f4-48254fe35856')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-71f64978-f712-48e6-aa9e-ace02cc594ba')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -642,12 +640,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f2b277b1-a07f-423f-b9f4-48254fe35856 button.colab-df-convert');
+          document.querySelector('#df-71f64978-f712-48e6-aa9e-ace02cc594ba button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f2b277b1-a07f-423f-b9f4-48254fe35856');
+          const element = document.querySelector('#df-71f64978-f712-48e6-aa9e-ace02cc594ba');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -801,7 +799,7 @@ dtype: int64
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/tugas1_17_1.png" src="_images/tugas1_17_1.png" />
+<img alt="_images/tugas2_17_1.png" src="_images/tugas2_17_1.png" />
 </div>
 </div>
 </section>
@@ -834,19 +832,12 @@ dtype: int64
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tugas1.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction</p>
+            <p class="prev-next-title">1. Statistik Deskrit</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="tugas2.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2. Deskritisasi</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

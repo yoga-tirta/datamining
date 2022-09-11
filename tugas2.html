@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Deskritisasi &#8212; Data Mining Project</title>
+    <title>2. Diskritisasi &#8212; Data Mining Project</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="1. Statistik Deskrit" href="tugas1.html" />
+    <link rel="prev" title="1. Statistik Deskriptif" href="tugas1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,12 +115,12 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tugas1.html">
-   1. Statistik Deskrit
+   1. Statistik Deskriptif
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Deskritisasi
+   2. Diskritisasi
   </a>
  </li>
 </ul>
@@ -329,49 +329,44 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membaca-data-dari-url">
-   <strong>
-    1. Membaca Data Dari URL
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   2. Diskritisasi
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe">
-   <strong>
-    2. Membuat statistik dari data setiap atribut yang bertipe
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rata-rata-mean">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task">
      <strong>
-      2.1 Rata-rata (Mean)
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-sering-muncul-modulus">
-     <strong>
-      2.2 Nilai sering muncul (Modulus)
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-tengah-median">
-     <strong>
-      2.3 Nilai Tengah (Median)
+      Task
      </strong>
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bining-data">
    <strong>
-    3. Mendeskripsikan kemiringan / skwened dari data setiap variabel
+    Bining data
    </strong>
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lakukan-proses-diskritisasi-dengan-equal-width-dan-equal-frequency">
+     <strong>
+      1. Lakukan proses diskritisasi dengan equal width dan equal frequency
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#equal-width">
+       <strong>
+        1.1 Equal Width
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -382,7 +377,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>2. Deskritisasi</h1>
+                <h1>2. Diskritisasi</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -392,49 +387,44 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membaca-data-dari-url">
-   <strong>
-    1. Membaca Data Dari URL
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   2. Diskritisasi
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe">
-   <strong>
-    2. Membuat statistik dari data setiap atribut yang bertipe
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rata-rata-mean">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task">
      <strong>
-      2.1 Rata-rata (Mean)
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-sering-muncul-modulus">
-     <strong>
-      2.2 Nilai sering muncul (Modulus)
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-tengah-median">
-     <strong>
-      2.3 Nilai Tengah (Median)
+      Task
      </strong>
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bining-data">
    <strong>
-    3. Mendeskripsikan kemiringan / skwened dari data setiap variabel
+    Bining data
    </strong>
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lakukan-proses-diskritisasi-dengan-equal-width-dan-equal-frequency">
+     <strong>
+      1. Lakukan proses diskritisasi dengan equal width dan equal frequency
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#equal-width">
+       <strong>
+        1.1 Equal Width
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -446,15 +436,58 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="deskritisasi">
-<h1>2. Deskritisasi<a class="headerlink" href="#deskritisasi" title="Permalink to this headline">#</a></h1>
-<section id="membaca-data-dari-url">
-<h2><strong>1. Membaca Data Dari URL</strong><a class="headerlink" href="#membaca-data-dari-url" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="diskritisasi">
+<h1>2. Diskritisasi<a class="headerlink" href="#diskritisasi" title="Permalink to this headline">#</a></h1>
+<section id="task">
+<h2><strong>Task</strong><a class="headerlink" href="#task" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Lakukan proses diskritisasi dengan equal width dan equal frequency</p></li>
+<li><p>Lakukan proses diskritisasi dengan basis entropy</p></li>
+</ol>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bining-data">
+<h1><strong>Bining data</strong><a class="headerlink" href="#bining-data" title="Permalink to this headline">#</a></h1>
+<p>Binning adalah cara untuk mengelompokkan suatu data ke dalam jumlah yang lebih kecil pada <em>“bins”</em>. Contohnya : jika Anda memiliki data mengenai sekelompok orang yang memiliki berbagai macam usia, Anda mungkin ingin mengatur usia mereka kedalam interval usia yang lebih sedikit, kamu dapat menggunakan metode binning pada TIBCO Spotfire untuk mengecilkan spesifikasi usia pada anggota kelompok tersebut.</p>
+<p>Terdapat juga opsi lain dalam mengelompokkan data-data yang sudah dikategorikan ke dalam <em>“bins”</em>. Metode ini sangat membantu ketika Anda memiliki banyak kategori data dalam kolom daripada yang seharusnya dibutuhkan, sehingga Anda dpat menyederhanakannya melalui ini.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/dragracer/rpdr_contestants.csv&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library yang diperlukan</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#membaca dataset dari link csv</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/DAAG/kiwishade.csv&quot;</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#menampilkan informasi pada data</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 48 entries, 0 to 47
+Data columns (total 5 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   Unnamed: 0  48 non-null     int64  
+ 1   yield       48 non-null     float64
+ 2   block       48 non-null     object 
+ 3   shade       48 non-null     object 
+ 4   plot        48 non-null     object 
+dtypes: float64(1), int64(1), object(3)
+memory usage: 2.0+ KB
 </pre></div>
 </div>
 </div>
@@ -467,7 +500,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-71f64978-f712-48e6-aa9e-ace02cc594ba">
+  <div id="df-8753b86a-825c-489c-9464-8eea72c90274">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -488,108 +521,97 @@ title="Print to PDF"
     <tr style="text-align: right;">
       <th></th>
       <th>Unnamed: 0</th>
-      <th>season</th>
-      <th>contestant</th>
-      <th>age</th>
-      <th>dob</th>
-      <th>hometown</th>
+      <th>yield</th>
+      <th>block</th>
+      <th>shade</th>
+      <th>plot</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>1</td>
-      <td>S01</td>
-      <td>BeBe Zahara Benet</td>
-      <td>28</td>
-      <td>1981-03-20</td>
-      <td>Minneapolis, Minnesota</td>
+      <td>101.11</td>
+      <td>north</td>
+      <td>none</td>
+      <td>north.none</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2</td>
-      <td>S01</td>
-      <td>Nina Flowers</td>
-      <td>34</td>
-      <td>1974-02-22</td>
-      <td>Bayamón, Puerto Rico</td>
+      <td>108.02</td>
+      <td>north</td>
+      <td>none</td>
+      <td>north.none</td>
     </tr>
     <tr>
       <th>2</th>
       <td>3</td>
-      <td>S01</td>
-      <td>Rebecca Glasscock</td>
-      <td>26</td>
-      <td>1983-05-25</td>
-      <td>Fort Lauderdale, Florida</td>
+      <td>106.67</td>
+      <td>north</td>
+      <td>none</td>
+      <td>north.none</td>
     </tr>
     <tr>
       <th>3</th>
       <td>4</td>
-      <td>S01</td>
-      <td>Shannel</td>
-      <td>26</td>
-      <td>1979-07-03</td>
-      <td>Las Vegas, Nevada</td>
+      <td>100.30</td>
+      <td>north</td>
+      <td>none</td>
+      <td>north.none</td>
     </tr>
     <tr>
       <th>4</th>
       <td>5</td>
-      <td>S01</td>
-      <td>Ongina</td>
-      <td>26</td>
-      <td>1982-01-06</td>
-      <td>Los Angeles, California</td>
+      <td>92.64</td>
+      <td>west</td>
+      <td>none</td>
+      <td>west.none</td>
     </tr>
     <tr>
       <th>5</th>
       <td>6</td>
-      <td>S01</td>
-      <td>Jade</td>
-      <td>32</td>
-      <td>1984-11-18</td>
-      <td>Chicago, Illinois</td>
+      <td>103.49</td>
+      <td>west</td>
+      <td>none</td>
+      <td>west.none</td>
     </tr>
     <tr>
       <th>6</th>
       <td>7</td>
-      <td>S01</td>
-      <td>Akashia</td>
-      <td>32</td>
-      <td>1985-02-19</td>
-      <td>Cleveland, Ohio</td>
+      <td>100.68</td>
+      <td>west</td>
+      <td>none</td>
+      <td>west.none</td>
     </tr>
     <tr>
       <th>7</th>
       <td>8</td>
-      <td>S01</td>
-      <td>Tammie Brown</td>
-      <td>36</td>
-      <td>1980-09-15</td>
-      <td>Los Angeles, California</td>
+      <td>93.42</td>
+      <td>west</td>
+      <td>none</td>
+      <td>west.none</td>
     </tr>
     <tr>
       <th>8</th>
       <td>9</td>
-      <td>S01</td>
-      <td>Victoria (Porkchop) Parker</td>
-      <td>39</td>
-      <td>1969-01-16</td>
-      <td>Raleigh, North Carolina</td>
+      <td>100.31</td>
+      <td>east</td>
+      <td>none</td>
+      <td>east.none</td>
     </tr>
     <tr>
       <th>9</th>
       <td>10</td>
-      <td>S02</td>
-      <td>Tyra Sanchez</td>
-      <td>21</td>
-      <td>1988-04-22</td>
-      <td>Orlando, Florida</td>
+      <td>97.00</td>
+      <td>east</td>
+      <td>none</td>
+      <td>east.none</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-71f64978-f712-48e6-aa9e-ace02cc594ba')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8753b86a-825c-489c-9464-8eea72c90274')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -640,12 +662,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-71f64978-f712-48e6-aa9e-ace02cc594ba button.colab-df-convert');
+          document.querySelector('#df-8753b86a-825c-489c-9464-8eea72c90274 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-71f64978-f712-48e6-aa9e-ace02cc594ba');
+          const element = document.querySelector('#df-8753b86a-825c-489c-9464-8eea72c90274');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -666,142 +688,253 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
+<section id="lakukan-proses-diskritisasi-dengan-equal-width-dan-equal-frequency">
+<h2><strong>1. Lakukan proses diskritisasi dengan equal width dan equal frequency</strong><a class="headerlink" href="#lakukan-proses-diskritisasi-dengan-equal-width-dan-equal-frequency" title="Permalink to this headline">#</a></h2>
+<section id="equal-width">
+<h3><strong>1.1 Equal Width</strong><a class="headerlink" href="#equal-width" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p>Equal-width intervals adalah discretization yang membagi data numerik menjadi beberapa kelompok dengan lebar kelompok yang kurang lebih sama besar.</p>
+</div></blockquote>
+<p>Tahap pertama membuat kategori</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Kategori</span>
+<span class="n">kategori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sedikit&#39;</span><span class="p">,</span><span class="s1">&#39;sedang&#39;</span><span class="p">,</span><span class="s1">&#39;banyak&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kemudian menggunakan fungsi linspace() untuk membuat array yang berisi sejumlah angka dengan jarak yang sama.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Menarik batas dengan 4 kunci</span>
+<span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;yield&#39;</span><span class="p">]),</span> <span class="nb">max</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;yield&#39;</span><span class="p">]),</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">bins</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 184 entries, 0 to 183
-Data columns (total 6 columns):
- #   Column      Non-Null Count  Dtype 
----  ------      --------------  ----- 
- 0   Unnamed: 0  184 non-null    int64 
- 1   season      184 non-null    object
- 2   contestant  184 non-null    object
- 3   age         184 non-null    int64 
- 4   dob         183 non-null    object
- 5   hometown    184 non-null    object
-dtypes: int64(2), object(4)
-memory usage: 8.8+ KB
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 81.43      ,  90.57666667,  99.72333333, 108.87      ])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Selanjutnya menggunakan fungsi cut() untuk melakukan binning</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;ukuran_binned_equal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;yield&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">kategori</span><span class="p">,</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span>
-<span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      28
-1      34
-2      26
-3      26
-4      26
-       ..
-179    26
-180    25
-181    29
-182    26
-183    29
-Name: age, Length: 184, dtype: int64
-</pre></div>
+<div class="output text_html">
+  <div id="df-66230c4a-8d4e-4947-a71b-9c1b43abc253">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>yield</th>
+      <th>block</th>
+      <th>shade</th>
+      <th>plot</th>
+      <th>ukuran_binned_equal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>101.11</td>
+      <td>north</td>
+      <td>none</td>
+      <td>north.none</td>
+      <td>banyak</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>108.02</td>
+      <td>north</td>
+      <td>none</td>
+      <td>north.none</td>
+      <td>banyak</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>106.67</td>
+      <td>north</td>
+      <td>none</td>
+      <td>north.none</td>
+      <td>banyak</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>100.30</td>
+      <td>north</td>
+      <td>none</td>
+      <td>north.none</td>
+      <td>banyak</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>92.64</td>
+      <td>west</td>
+      <td>none</td>
+      <td>west.none</td>
+      <td>sedang</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>103.49</td>
+      <td>west</td>
+      <td>none</td>
+      <td>west.none</td>
+      <td>banyak</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>100.68</td>
+      <td>west</td>
+      <td>none</td>
+      <td>west.none</td>
+      <td>banyak</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>93.42</td>
+      <td>west</td>
+      <td>none</td>
+      <td>west.none</td>
+      <td>sedang</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>100.31</td>
+      <td>east</td>
+      <td>none</td>
+      <td>east.none</td>
+      <td>banyak</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>97.00</td>
+      <td>east</td>
+      <td>none</td>
+      <td>east.none</td>
+      <td>sedang</td>
+    </tr>
+  </tbody>
+</table>
 </div>
-</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-66230c4a-8d4e-4947-a71b-9c1b43abc253')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-66230c4a-8d4e-4947-a71b-9c1b43abc253 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-66230c4a-8d4e-4947-a71b-9c1b43abc253');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
 </div>
 </section>
-<section id="membuat-statistik-dari-data-setiap-atribut-yang-bertipe">
-<h2><strong>2. Membuat statistik dari data setiap atribut yang bertipe</strong><a class="headerlink" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe" title="Permalink to this headline">#</a></h2>
-<section id="rata-rata-mean">
-<h3><strong>2.1 Rata-rata (Mean)</strong><a class="headerlink" href="#rata-rata-mean" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.934782608695652
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="nilai-sering-muncul-modulus">
-<h3><strong>2.2 Nilai sering muncul (Modulus)</strong><a class="headerlink" href="#nilai-sering-muncul-modulus" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    26
-dtype: int64
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="nilai-tengah-median">
-<h3><strong>2.3 Nilai Tengah (Median)</strong><a class="headerlink" href="#nilai-tengah-median" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.0
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
-<h2><strong>3. Mendeskripsikan kemiringan / skwened dari data setiap variabel</strong><a class="headerlink" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel" title="Permalink to this headline">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1632419676658976
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
-</pre></div>
-</div>
-<img alt="_images/tugas2_17_1.png" src="_images/tugas2_17_1.png" />
-</div>
-</div>
 </section>
 </section>
 
@@ -836,7 +969,7 @@ dtype: int64
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">1. Statistik Deskrit</p>
+            <p class="prev-next-title">1. Statistik Deskriptif</p>
         </div>
     </a>
 </div>

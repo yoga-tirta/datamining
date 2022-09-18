@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="2. Diskritisasi" href="tugas2.html" />
@@ -122,6 +124,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="tugas2.html">
    2. Diskritisasi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas3.html">
+   3. Algoritma K-NN
   </a>
  </li>
 </ul>
@@ -345,9 +352,9 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe">
+  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe-numerik">
    <strong>
-    2. Membuat statistik dari data setiap atribut yang bertipe
+    2. Membuat statistik dari data setiap atribut yang bertipe Numerik
    </strong>
   </a>
   <ul class="nav section-nav flex-column">
@@ -359,16 +366,23 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-sering-muncul-modulus">
+    <a class="reference internal nav-link" href="#nilai-tengah-median">
      <strong>
-      2.2 Nilai sering muncul (Modulus)
+      2.2 Nilai Tengah (Median)
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-tengah-median">
+    <a class="reference internal nav-link" href="#nilai-sering-muncul-modulus">
      <strong>
-      2.3 Nilai Tengah (Median)
+      2.3 Nilai sering muncul (Modulus)
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kuartil">
+     <strong>
+      2.4 Kuartil
      </strong>
     </a>
    </li>
@@ -415,9 +429,9 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe">
+  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe-numerik">
    <strong>
-    2. Membuat statistik dari data setiap atribut yang bertipe
+    2. Membuat statistik dari data setiap atribut yang bertipe Numerik
    </strong>
   </a>
   <ul class="nav section-nav flex-column">
@@ -429,16 +443,23 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-sering-muncul-modulus">
+    <a class="reference internal nav-link" href="#nilai-tengah-median">
      <strong>
-      2.2 Nilai sering muncul (Modulus)
+      2.2 Nilai Tengah (Median)
      </strong>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-tengah-median">
+    <a class="reference internal nav-link" href="#nilai-sering-muncul-modulus">
      <strong>
-      2.3 Nilai Tengah (Median)
+      2.3 Nilai sering muncul (Modulus)
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kuartil">
+     <strong>
+      2.4 Kuartil
      </strong>
     </a>
    </li>
@@ -473,16 +494,22 @@ title="Print to PDF"
 </section>
 <section id="membaca-data-dari-url">
 <h2><strong>1. Membaca Data Dari URL</strong><a class="headerlink" href="#membaca-data-dari-url" title="Permalink to this headline">#</a></h2>
+<p>Hal yang pertama kita lakukan untuk membaca dataset yaitu dengan import library yang dibutuhkan untuk membaca data, kemudian memasukkan link dari dataset yang ini kita baca seperti dibawah ini :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import Dataset</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library pandas dan numpy</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1">#Import Dataset</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/dragracer/rpdr_contestants.csv&quot;</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<blockquote>
+<div><p>Kemudian kita tampilkan informasi dari dataset yang sudah kita masukkan</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -509,13 +536,13 @@ memory usage: 8.8+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9c4113f6-4b29-44f3-a452-fdbc5ba053a3">
+  <div id="df-56dfe4ce-6c28-4469-8ed1-32d373782eab">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -590,54 +617,64 @@ memory usage: 8.8+ KB
       <td>Los Angeles, California</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>6</td>
-      <td>S01</td>
-      <td>Jade</td>
-      <td>32</td>
-      <td>1984-11-18</td>
-      <td>Chicago, Illinois</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>S01</td>
-      <td>Akashia</td>
-      <td>32</td>
-      <td>1985-02-19</td>
-      <td>Cleveland, Ohio</td>
+      <th>179</th>
+      <td>180</td>
+      <td>S14</td>
+      <td>Maddy Morphosis</td>
+      <td>26</td>
+      <td>1994-09-02</td>
+      <td>Fayetteville, Arkansas</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>8</td>
-      <td>S01</td>
-      <td>Tammie Brown</td>
-      <td>36</td>
-      <td>1980-09-15</td>
+      <th>180</th>
+      <td>181</td>
+      <td>S14</td>
+      <td>Orion Story</td>
+      <td>25</td>
+      <td>1996-06-25</td>
+      <td>Grand Rapids, Michigan</td>
+    </tr>
+    <tr>
+      <th>181</th>
+      <td>182</td>
+      <td>S14</td>
+      <td>Kornbread (The Snack) Jete</td>
+      <td>29</td>
+      <td>1992-01-14</td>
       <td>Los Angeles, California</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>9</td>
-      <td>S01</td>
-      <td>Victoria (Porkchop) Parker</td>
-      <td>39</td>
-      <td>1969-01-16</td>
-      <td>Raleigh, North Carolina</td>
+      <th>182</th>
+      <td>183</td>
+      <td>S14</td>
+      <td>Alyssa Hunter</td>
+      <td>26</td>
+      <td>1995-02-19</td>
+      <td>Catano, Puerto Rico</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>10</td>
-      <td>S02</td>
-      <td>Tyra Sanchez</td>
-      <td>21</td>
-      <td>1988-04-22</td>
-      <td>Orlando, Florida</td>
+      <th>183</th>
+      <td>184</td>
+      <td>S14</td>
+      <td>June Jambalaya</td>
+      <td>29</td>
+      <td>NaN</td>
+      <td>Los Angeles, California</td>
     </tr>
   </tbody>
 </table>
+<p>184 rows × 6 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9c4113f6-4b29-44f3-a452-fdbc5ba053a3')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-56dfe4ce-6c28-4469-8ed1-32d373782eab')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -688,12 +725,12 @@ memory usage: 8.8+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9c4113f6-4b29-44f3-a452-fdbc5ba053a3 button.colab-df-convert');
+          document.querySelector('#df-56dfe4ce-6c28-4469-8ed1-32d373782eab button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9c4113f6-4b29-44f3-a452-fdbc5ba053a3');
+          const element = document.querySelector('#df-56dfe4ce-6c28-4469-8ed1-32d373782eab');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -714,6 +751,10 @@ memory usage: 8.8+ KB
   </div>
 </div></div>
 </div>
+</section>
+<section id="membuat-statistik-dari-data-setiap-atribut-yang-bertipe-numerik">
+<h2><strong>2. Membuat statistik dari data setiap atribut yang bertipe Numerik</strong><a class="headerlink" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe-numerik" title="Permalink to this headline">#</a></h2>
+<p>Untuk membuat statistik dari dataset kita, kita membutuhkan data yang bertipe <em>Numerik</em>, maka kita tampilkan data yang bertipe Numerik seperti berikut :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span>
@@ -738,14 +779,20 @@ Name: age, Length: 184, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="membuat-statistik-dari-data-setiap-atribut-yang-bertipe">
-<h2><strong>2. Membuat statistik dari data setiap atribut yang bertipe</strong><a class="headerlink" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe" title="Permalink to this headline">#</a></h2>
 <section id="rata-rata-mean">
 <h3><strong>2.1 Rata-rata (Mean)</strong><a class="headerlink" href="#rata-rata-mean" title="Permalink to this headline">#</a></h3>
+<p><strong>Mean</strong> merupakan angka representasi dari suatu kelompok data yang mewakili data secara keseluruhan. Menentukan mean dapat dilakukan dengan cara menjumlahkan seluruh nilai data, kemudian membaginya dengan banyaknya data.</p>
+<blockquote>
+<div><p>Rumus dari Mean yaitu</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+      mean = \frac{1}{n} \sum_{i=i}^{n} x_{i}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menentukan Mean</span>
+<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -756,11 +803,43 @@ Name: age, Length: 184, dtype: int64
 </div>
 </div>
 </section>
-<section id="nilai-sering-muncul-modulus">
-<h3><strong>2.2 Nilai sering muncul (Modulus)</strong><a class="headerlink" href="#nilai-sering-muncul-modulus" title="Permalink to this headline">#</a></h3>
+<section id="nilai-tengah-median">
+<h3><strong>2.2 Nilai Tengah (Median)</strong><a class="headerlink" href="#nilai-tengah-median" title="Permalink to this headline">#</a></h3>
+<p><strong>Median</strong> memiliki pengertian sebagai nilai data tengah. Menentukan Median dapat dilakukan dengan cara semua data  kita urutkan dari yang terkecil sampai terbesar kemudian kita ambil nilai tengahnya</p>
+<blockquote>
+<div><p>Rumus dari Median yaitu</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+\mathcal {median} = tb + (\frac {\frac {n} 2 - F } {Fm} ) p
+\]</div>
+<ul class="simple">
+<li><p>Tb = tepi bawah dari kelas n/2</p></li>
+<li><p>F = Frekuensi kumulatif sebelum kelas median</p></li>
+<li><p>Fm = frekuensi kelas median</p></li>
+<li><p>p = interval</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menentukan Median</span>
+<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="nilai-sering-muncul-modulus">
+<h3><strong>2.3 Nilai sering muncul (Modulus)</strong><a class="headerlink" href="#nilai-sering-muncul-modulus" title="Permalink to this headline">#</a></h3>
+<p><strong>Modulus</strong> adalah nilai yang paling sering muncul dalam suatu data. Modus juga merupakan nilai mayoritas atau nilai dengan frekuensi paling tinggi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menentukan Modulus</span>
+<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -772,11 +851,13 @@ dtype: int64
 </div>
 </div>
 </section>
-<section id="nilai-tengah-median">
-<h3><strong>2.3 Nilai Tengah (Median)</strong><a class="headerlink" href="#nilai-tengah-median" title="Permalink to this headline">#</a></h3>
+<section id="kuartil">
+<h3><strong>2.4 Kuartil</strong><a class="headerlink" href="#kuartil" title="Permalink to this headline">#</a></h3>
+<p><strong>Kuartil</strong> adalah nilai yang membagi data yang berurutan menjadi empat bagian yang sama banyak. Karena data terbagi menjadi empat bagian yang sama, artinya terdapat tiga nilai kuartil, yaitu kuartil bawah (Q1), kuartil tengah (Q2), dan kuartil atas (Q3).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menentukan Kuartil</span>
+<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -790,6 +871,19 @@ dtype: int64
 </section>
 <section id="mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
 <h2><strong>3. Mendeskripsikan kemiringan / skwened dari data setiap variabel</strong><a class="headerlink" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel" title="Permalink to this headline">#</a></h2>
+<p><strong>Skewness</strong> adalah tingkat ketidaksimetrisan atau kejauhan simetri dari sebuah distribusi. Skewness diartikan sebagai kemiringan distribusi data.</p>
+<blockquote>
+<div><p>Rumus dari Skewness yaitu</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+skewness =\frac{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{3}}{(n-1) s^{3}}
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\bar{x}\)</span> adalah sampel mean</p></li>
+<li><p>s adalah standar deviasi</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{i}\)</span> adalah sampel</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
@@ -804,7 +898,8 @@ dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library matplotlib dan seaborn</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 </pre></div>
 </div>
@@ -812,7 +907,8 @@ dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat grafik skewness</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -823,7 +919,7 @@ dtype: int64
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/tugas1_17_1.png" src="_images/tugas1_17_1.png" />
+<img alt="_images/tugas1_33_1.png" src="_images/tugas1_33_1.png" />
 </div>
 </div>
 </section>

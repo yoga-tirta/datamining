@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Statistik Deskriptif &#8212; Data Mining Project</title>
+    <title>5. Tugas UTS &#8212; Data Mining Project</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Diskritisasi" href="tugas2.html" />
-    <link rel="prev" title="Introduction" href="intro.html" />
+    <link rel="prev" title="4. Algoritma K-Means" href="tugas4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,8 +113,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas1.html">
    1. Statistik Deskriptif
   </a>
  </li>
@@ -136,8 +133,8 @@ const thebe_selector_output = ".output, .cell_output"
    4. Algoritma K-Means
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="uts.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    5. Tugas UTS
   </a>
  </li>
@@ -200,7 +197,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/drive/1XgOJxyXibAUEmK0of43c9ks4Wk2GdU1t#scrollTo=8x8JM1_KGpiH/github/yoga-tirta/datamining/blob/master/docs/tugas1.ipynb"
+        <a href="https://colab.research.google.com/drive/1XgOJxyXibAUEmK0of43c9ks4Wk2GdU1t#scrollTo=8x8JM1_KGpiH/github/yoga-tirta/datamining/blob/master/docs/uts.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -260,7 +257,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/yoga-tirta/datamining/issues/new?title=Issue%20on%20page%20%2Ftugas1.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/yoga-tirta/datamining/issues/new?title=Issue%20on%20page%20%2Futs.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -288,7 +285,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/tugas1.ipynb"
+        <a href="_sources/uts.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -347,61 +344,41 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5. Tugas UTS
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task">
    <strong>
     Task
    </strong>
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membaca-data-dari-url">
-   <strong>
-    1. Membaca Data Dari URL
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe-numerik">
-   <strong>
-    2. Membuat statistik dari data setiap atribut yang bertipe Numerik
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rata-rata-mean">
-     <strong>
-      2.1 Rata-rata (Mean)
-     </strong>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-dataset-and-library">
+     Import Dataset and Library
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-tengah-median">
-     <strong>
-      2.2 Nilai Tengah (Median)
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-sering-muncul-modulus">
-     <strong>
-      2.3 Nilai sering muncul (Modulus)
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kuartil">
-     <strong>
-      2.4 Kuartil
-     </strong>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membagi-dataset-menjadi-train-data-dan-test-data">
+     Membagi dataset menjadi train data dan test data
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-nearest-neighbor-knn">
    <strong>
-    3. Mendeskripsikan kemiringan / skwened dari data setiap variabel
+    1. K-Nearest Neighbor (KNN)
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decision-tree">
+   <strong>
+    2. Decision Tree
    </strong>
   </a>
  </li>
@@ -414,7 +391,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>1. Statistik Deskriptif</h1>
+                <h1>5. Tugas UTS</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -424,61 +401,41 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5. Tugas UTS
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task">
    <strong>
     Task
    </strong>
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membaca-data-dari-url">
-   <strong>
-    1. Membaca Data Dari URL
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe-numerik">
-   <strong>
-    2. Membuat statistik dari data setiap atribut yang bertipe Numerik
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rata-rata-mean">
-     <strong>
-      2.1 Rata-rata (Mean)
-     </strong>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-dataset-and-library">
+     Import Dataset and Library
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-tengah-median">
-     <strong>
-      2.2 Nilai Tengah (Median)
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nilai-sering-muncul-modulus">
-     <strong>
-      2.3 Nilai sering muncul (Modulus)
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kuartil">
-     <strong>
-      2.4 Kuartil
-     </strong>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membagi-dataset-menjadi-train-data-dan-test-data">
+     Membagi dataset menjadi train data dan test data
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-nearest-neighbor-knn">
    <strong>
-    3. Mendeskripsikan kemiringan / skwened dari data setiap variabel
+    1. K-Nearest Neighbor (KNN)
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decision-tree">
+   <strong>
+    2. Decision Tree
    </strong>
   </a>
  </li>
@@ -492,34 +449,32 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="statistik-deskriptif">
-<h1>1. Statistik Deskriptif<a class="headerlink" href="#statistik-deskriptif" title="Permalink to this headline">#</a></h1>
-<section id="task">
-<h2><strong>Task</strong><a class="headerlink" href="#task" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
-<li><p>Membaca data dari url</p></li>
-<li><p>Membuat statistik deskriptif dari data (setiap atribut yang bertipe numerik)</p></li>
-<li><p>Mendeskripsikan kemiringan / skewned dari data setiap variable (bertipe numerik)</p></li>
-</ol>
+  <section id="tugas-uts">
+<h1>5. Tugas UTS<a class="headerlink" href="#tugas-uts" title="Permalink to this headline">#</a></h1>
 </section>
-<section id="membaca-data-dari-url">
-<h2><strong>1. Membaca Data Dari URL</strong><a class="headerlink" href="#membaca-data-dari-url" title="Permalink to this headline">#</a></h2>
-<p>Hal yang pertama kita lakukan untuk membaca dataset yaitu dengan import library yang dibutuhkan untuk membaca data, kemudian memasukkan link dari dataset yang ini kita baca seperti dibawah ini :</p>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="task">
+<h1><strong>Task</strong><a class="headerlink" href="#task" title="Permalink to this headline">#</a></h1>
+<p>Lakukan analisa terhadap data pada</p>
+<p><strong>https</strong>://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra dengan menggunakan klasifikasi</p>
+<ul class="simple">
+<li><p>Metode KNN</p></li>
+<li><p>Metode Decision Tree</p></li>
+</ul>
+<section id="import-dataset-and-library">
+<h2>Import Dataset and Library<a class="headerlink" href="#import-dataset-and-library" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library pandas dan numpy</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library numpy dan pandas</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="c1">#Import Dataset</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/dragracer/rpdr_contestants.csv&quot;</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># import dataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/00451/dataR2.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<blockquote>
-<div><p>Kemudian kita tampilkan informasi dari dataset yang sudah kita masukkan</p>
-</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -528,18 +483,22 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 184 entries, 0 to 183
-Data columns (total 6 columns):
- #   Column      Non-Null Count  Dtype 
----  ------      --------------  ----- 
- 0   Unnamed: 0  184 non-null    int64 
- 1   season      184 non-null    object
- 2   contestant  184 non-null    object
- 3   age         184 non-null    int64 
- 4   dob         183 non-null    object
- 5   hometown    184 non-null    object
-dtypes: int64(2), object(4)
-memory usage: 8.8+ KB
+RangeIndex: 116 entries, 0 to 115
+Data columns (total 10 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   Age             116 non-null    int64  
+ 1   BMI             116 non-null    float64
+ 2   Glucose         116 non-null    int64  
+ 3   Insulin         116 non-null    float64
+ 4   HOMA            116 non-null    float64
+ 5   Leptin          116 non-null    float64
+ 6   Adiponectin     116 non-null    float64
+ 7   Resistin        116 non-null    float64
+ 8   MCP.1           116 non-null    float64
+ 9   Classification  116 non-null    int64  
+dtypes: float64(7), int64(3)
+memory usage: 9.2 KB
 </pre></div>
 </div>
 </div>
@@ -552,7 +511,7 @@ memory usage: 8.8+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-79bf1f56-402b-4cf4-894a-39e08461aa33">
+  <div id="df-ba66917b-b132-4f88-bc26-e807858c911b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -572,59 +531,83 @@ memory usage: 8.8+ KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
-      <th>season</th>
-      <th>contestant</th>
-      <th>age</th>
-      <th>dob</th>
-      <th>hometown</th>
+      <th>Age</th>
+      <th>BMI</th>
+      <th>Glucose</th>
+      <th>Insulin</th>
+      <th>HOMA</th>
+      <th>Leptin</th>
+      <th>Adiponectin</th>
+      <th>Resistin</th>
+      <th>MCP.1</th>
+      <th>Classification</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
+      <td>48</td>
+      <td>23.500000</td>
+      <td>70</td>
+      <td>2.707</td>
+      <td>0.467409</td>
+      <td>8.8071</td>
+      <td>9.702400</td>
+      <td>7.99585</td>
+      <td>417.114</td>
       <td>1</td>
-      <td>S01</td>
-      <td>BeBe Zahara Benet</td>
-      <td>28</td>
-      <td>1981-03-20</td>
-      <td>Minneapolis, Minnesota</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
-      <td>S01</td>
-      <td>Nina Flowers</td>
-      <td>34</td>
-      <td>1974-02-22</td>
-      <td>Bayamón, Puerto Rico</td>
+      <td>83</td>
+      <td>20.690495</td>
+      <td>92</td>
+      <td>3.115</td>
+      <td>0.706897</td>
+      <td>8.8438</td>
+      <td>5.429285</td>
+      <td>4.06405</td>
+      <td>468.786</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>S01</td>
-      <td>Rebecca Glasscock</td>
-      <td>26</td>
-      <td>1983-05-25</td>
-      <td>Fort Lauderdale, Florida</td>
+      <td>82</td>
+      <td>23.124670</td>
+      <td>91</td>
+      <td>4.498</td>
+      <td>1.009651</td>
+      <td>17.9393</td>
+      <td>22.432040</td>
+      <td>9.27715</td>
+      <td>554.697</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
-      <td>S01</td>
-      <td>Shannel</td>
-      <td>26</td>
-      <td>1979-07-03</td>
-      <td>Las Vegas, Nevada</td>
+      <td>68</td>
+      <td>21.367521</td>
+      <td>77</td>
+      <td>3.226</td>
+      <td>0.612725</td>
+      <td>9.8827</td>
+      <td>7.169560</td>
+      <td>12.76600</td>
+      <td>928.220</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
-      <td>S01</td>
-      <td>Ongina</td>
-      <td>26</td>
-      <td>1982-01-06</td>
-      <td>Los Angeles, California</td>
+      <td>86</td>
+      <td>21.111111</td>
+      <td>92</td>
+      <td>3.549</td>
+      <td>0.805386</td>
+      <td>6.6994</td>
+      <td>4.819240</td>
+      <td>10.57635</td>
+      <td>773.920</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>...</th>
@@ -634,57 +617,81 @@ memory usage: 8.8+ KB
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>179</th>
-      <td>180</td>
-      <td>S14</td>
-      <td>Maddy Morphosis</td>
-      <td>26</td>
-      <td>1994-09-02</td>
-      <td>Fayetteville, Arkansas</td>
+      <th>111</th>
+      <td>45</td>
+      <td>26.850000</td>
+      <td>92</td>
+      <td>3.330</td>
+      <td>0.755688</td>
+      <td>54.6800</td>
+      <td>12.100000</td>
+      <td>10.96000</td>
+      <td>268.230</td>
+      <td>2</td>
     </tr>
     <tr>
-      <th>180</th>
-      <td>181</td>
-      <td>S14</td>
-      <td>Orion Story</td>
-      <td>25</td>
-      <td>1996-06-25</td>
-      <td>Grand Rapids, Michigan</td>
+      <th>112</th>
+      <td>62</td>
+      <td>26.840000</td>
+      <td>100</td>
+      <td>4.530</td>
+      <td>1.117400</td>
+      <td>12.4500</td>
+      <td>21.420000</td>
+      <td>7.32000</td>
+      <td>330.160</td>
+      <td>2</td>
     </tr>
     <tr>
-      <th>181</th>
-      <td>182</td>
-      <td>S14</td>
-      <td>Kornbread (The Snack) Jete</td>
-      <td>29</td>
-      <td>1992-01-14</td>
-      <td>Los Angeles, California</td>
+      <th>113</th>
+      <td>65</td>
+      <td>32.050000</td>
+      <td>97</td>
+      <td>5.730</td>
+      <td>1.370998</td>
+      <td>61.4800</td>
+      <td>22.540000</td>
+      <td>10.33000</td>
+      <td>314.050</td>
+      <td>2</td>
     </tr>
     <tr>
-      <th>182</th>
-      <td>183</td>
-      <td>S14</td>
-      <td>Alyssa Hunter</td>
-      <td>26</td>
-      <td>1995-02-19</td>
-      <td>Catano, Puerto Rico</td>
+      <th>114</th>
+      <td>72</td>
+      <td>25.590000</td>
+      <td>82</td>
+      <td>2.820</td>
+      <td>0.570392</td>
+      <td>24.9600</td>
+      <td>33.750000</td>
+      <td>3.27000</td>
+      <td>392.460</td>
+      <td>2</td>
     </tr>
     <tr>
-      <th>183</th>
-      <td>184</td>
-      <td>S14</td>
-      <td>June Jambalaya</td>
-      <td>29</td>
-      <td>NaN</td>
-      <td>Los Angeles, California</td>
+      <th>115</th>
+      <td>86</td>
+      <td>27.180000</td>
+      <td>138</td>
+      <td>19.910</td>
+      <td>6.777364</td>
+      <td>90.2800</td>
+      <td>14.110000</td>
+      <td>4.35000</td>
+      <td>90.090</td>
+      <td>2</td>
     </tr>
   </tbody>
 </table>
-<p>184 rows × 6 columns</p>
+<p>116 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-79bf1f56-402b-4cf4-894a-39e08461aa33')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ba66917b-b132-4f88-bc26-e807858c911b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -735,12 +742,12 @@ memory usage: 8.8+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-79bf1f56-402b-4cf4-894a-39e08461aa33 button.colab-df-convert');
+          document.querySelector('#df-ba66917b-b132-4f88-bc26-e807858c911b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-79bf1f56-402b-4cf4-894a-39e08461aa33');
+          const element = document.querySelector('#df-ba66917b-b132-4f88-bc26-e807858c911b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -762,177 +769,136 @@ memory usage: 8.8+ KB
 </div></div>
 </div>
 </section>
-<section id="membuat-statistik-dari-data-setiap-atribut-yang-bertipe-numerik">
-<h2><strong>2. Membuat statistik dari data setiap atribut yang bertipe Numerik</strong><a class="headerlink" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertipe-numerik" title="Permalink to this headline">#</a></h2>
-<p>Untuk membuat statistik dari dataset kita, kita membutuhkan data yang bertipe <em>Numerik</em>, maka kita tampilkan data yang bertipe Numerik seperti berikut :</p>
+<section id="membagi-dataset-menjadi-train-data-dan-test-data">
+<h2>Membagi dataset menjadi train data dan test data<a class="headerlink" href="#membagi-dataset-menjadi-train-data-dan-test-data" title="Permalink to this headline">#</a></h2>
+<p>Pertama tama kita bagi data input dan data klasifikasi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span>
-<span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Classification&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">Classification</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kemudian kita lakukan spliting dataset yang berguna untuk membagi data train dan data test yang nantinya akan digunakan untuk menghitung akurasi dari model klasifikasi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      28
-1      34
-2      26
-3      26
-4      26
-       ..
-179    26
-180    25
-181    29
-182    26
-183    29
-Name: age, Length: 184, dtype: int64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((92, 9), (24, 9), (92,), (24,))
 </pre></div>
 </div>
 </div>
 </div>
-<section id="rata-rata-mean">
-<h3><strong>2.1 Rata-rata (Mean)</strong><a class="headerlink" href="#rata-rata-mean" title="Permalink to this headline">#</a></h3>
-<p><strong>Mean</strong> merupakan angka representasi dari suatu kelompok data yang mewakili data secara keseluruhan. Menentukan mean dapat dilakukan dengan cara menjumlahkan seluruh nilai data, kemudian membaginya dengan banyaknya data.</p>
-<blockquote>
-<div><p>Rumus dari Mean yaitu</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[
-      mean = \frac{1}{n} \sum_{i=i}^{n} x_{i}
-\]</div>
+<p>Selanjutnya kita lakukan Feature Scaling agar jarak data dapat diprediksi dengan baik</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menentukan Mean</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.934782608695652
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="nilai-tengah-median">
-<h3><strong>2.2 Nilai Tengah (Median)</strong><a class="headerlink" href="#nilai-tengah-median" title="Permalink to this headline">#</a></h3>
-<p><strong>Median</strong> memiliki pengertian sebagai nilai data tengah. Menentukan Median dapat dilakukan dengan cara semua data  kita urutkan dari yang terkecil sampai terbesar kemudian kita ambil nilai tengahnya</p>
-<blockquote>
-<div><p>Rumus dari Median yaitu</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[
-\mathcal {median} = tb + (\frac {\frac {n} 2 - F } {Fm} ) p
-\]</div>
-<ul class="simple">
-<li><p>Tb = tepi bawah dari kelas n/2</p></li>
-<li><p>F = Frekuensi kumulatif sebelum kelas median</p></li>
-<li><p>Fm = frekuensi kelas median</p></li>
-<li><p>p = interval</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menentukan Median</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.0
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="nilai-sering-muncul-modulus">
-<h3><strong>2.3 Nilai sering muncul (Modulus)</strong><a class="headerlink" href="#nilai-sering-muncul-modulus" title="Permalink to this headline">#</a></h3>
-<p><strong>Modulus</strong> adalah nilai yang paling sering muncul dalam suatu data. Modus juga merupakan nilai mayoritas atau nilai dengan frekuensi paling tinggi</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menentukan Modulus</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    26
-dtype: int64
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="kuartil">
-<h3><strong>2.4 Kuartil</strong><a class="headerlink" href="#kuartil" title="Permalink to this headline">#</a></h3>
-<p><strong>Kuartil</strong> adalah nilai yang membagi data yang berurutan menjadi empat bagian yang sama banyak. Karena data terbagi menjadi empat bagian yang sama, artinya terdapat tiga nilai kuartil, yaitu kuartil bawah (Q1), kuartil tengah (Q2), dan kuartil atas (Q3).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menentukan Kuartil</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
-<h2><strong>3. Mendeskripsikan kemiringan / skwened dari data setiap variabel</strong><a class="headerlink" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel" title="Permalink to this headline">#</a></h2>
-<p><strong>Skewness</strong> adalah tingkat ketidaksimetrisan atau kejauhan simetri dari sebuah distribusi. Skewness diartikan sebagai kemiringan distribusi data.</p>
-<blockquote>
-<div><p>Rumus dari Skewness yaitu</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[
-skewness =\frac{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{3}}{(n-1) s^{3}}
-\]</div>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\bar{x}\)</span> adalah sampel mean</p></li>
-<li><p>s adalah standar deviasi</p></li>
-<li><p><span class="math notranslate nohighlight">\(x_{i}\)</span> adalah sampel</p></li>
-</ul>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="k-nearest-neighbor-knn">
+<h1><strong>1. K-Nearest Neighbor (KNN)</strong><a class="headerlink" href="#k-nearest-neighbor-knn" title="Permalink to this headline">#</a></h1>
+<p>Kita buat klasifikasi KNN dengan nilai K=3 dan import library yang diperlukan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="c1"># membuat klasifikasi KNN</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1632419676658976
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=3)
 </pre></div>
 </div>
 </div>
 </div>
+<p>Menghitung akurasi dari model KNN</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library matplotlib dan seaborn</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat grafik skewness</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score data train  :&quot;</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score data test   :&quot;</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Score data train  : 0.8586956521739131
+Score data test   : 0.7083333333333334
 </pre></div>
 </div>
-<img alt="_images/tugas1_33_1.png" src="_images/tugas1_33_1.png" />
 </div>
 </div>
+<p>Dari hasil yang tertera, dapat diketahui bahwa dengan menggunakan Metode KNN saat train data mendapatkan score sekitar 80%, tetapi saat test data scorenya menurun.</p>
 </section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="decision-tree">
+<h1><strong>2. Decision Tree</strong><a class="headerlink" href="#decision-tree" title="Permalink to this headline">#</a></h1>
+<p>Kita buat klasifikasi Decision Tree dan import library yang diperlukan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1"># membuat klasifikasi Decision Tree</span>
+<span class="n">clf_tree</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;entropy&quot;</span><span class="p">)</span>
+<span class="n">clf_tree</span> <span class="o">=</span> <span class="n">clf_tree</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lalu kita buat desain dari Decision Tree</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">(</span><span class="n">clf_tree</span><span class="p">,</span> <span class="n">feature_names</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)[:</span><span class="mi">9</span><span class="p">],</span> <span class="n">class_names</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)[</span><span class="mi">9</span><span class="p">]</span> <span class="p">,</span><span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/uts_21_0.png" src="_images/uts_21_0.png" />
+</div>
+</div>
+<p>Menghitung akurasi dari model Decision Tree</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score data train :&quot;</span><span class="p">,</span> <span class="n">clf_tree</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score data test  :&quot;</span><span class="p">,</span> <span class="n">clf_tree</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Score data train : 1.0
+Score data test  : 0.75
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dari hasil yang tertera, dapat diketahui bahwa dengan menggunakan Metode Decision Tree saat train data mendapatkan score sempurna, tetapi saat test data scorenya menurun.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -962,19 +928,12 @@ skewness =\frac{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{3}}{(n-1) s^{3}}
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tugas4.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction</p>
+            <p class="prev-next-title">4. Algoritma K-Means</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="tugas2.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2. Diskritisasi</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

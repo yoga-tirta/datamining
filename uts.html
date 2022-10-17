@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Tugas UTS &#8212; Data Mining Project</title>
+    <title>Tugas UTS &#8212; Data Mining Project</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="4. Algoritma K-Means" href="tugas4.html" />
+    <link rel="prev" title="6. Decision Tree" href="tugas6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -125,17 +125,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas3.html">
-   3. Algoritma K-NN
+   3. K-Nearest Neighbor
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas4.html">
-   4. Algoritma K-Means
+   4. Naive Bayes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas5.html">
+   5. K-Means Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas6.html">
+   6. Decision Tree
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   5. Tugas UTS
+   Tugas UTS
   </a>
  </li>
 </ul>
@@ -346,7 +356,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   5. Tugas UTS
+   Tugas UTS
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -391,7 +401,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>5. Tugas UTS</h1>
+                <h1>Tugas UTS</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -403,7 +413,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   5. Tugas UTS
+   Tugas UTS
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -450,7 +460,7 @@ title="Print to PDF"
               <div>
                 
   <section id="tugas-uts">
-<h1>5. Tugas UTS<a class="headerlink" href="#tugas-uts" title="Permalink to this headline">#</a></h1>
+<h1>Tugas UTS<a class="headerlink" href="#tugas-uts" title="Permalink to this headline">#</a></h1>
 </section>
 <hr class="docutils" />
 <section class="tex2jax_ignore mathjax_ignore" id="task">
@@ -511,7 +521,7 @@ memory usage: 9.2 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ba66917b-b132-4f88-bc26-e807858c911b">
+  <div id="df-1723f09d-7b47-468e-8ff9-62db6a7b1c75">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -691,7 +701,7 @@ memory usage: 9.2 KB
 </table>
 <p>116 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ba66917b-b132-4f88-bc26-e807858c911b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1723f09d-7b47-468e-8ff9-62db6a7b1c75')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -742,12 +752,12 @@ memory usage: 9.2 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ba66917b-b132-4f88-bc26-e807858c911b button.colab-df-convert');
+          document.querySelector('#df-1723f09d-7b47-468e-8ff9-62db6a7b1c75 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ba66917b-b132-4f88-bc26-e807858c911b');
+          const element = document.querySelector('#df-1723f09d-7b47-468e-8ff9-62db6a7b1c75');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -893,7 +903,7 @@ Score data test   : 0.7083333333333334
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Score data train : 1.0
-Score data test  : 0.75
+Score data test  : 0.7083333333333334
 </pre></div>
 </div>
 </div>
@@ -928,11 +938,11 @@ Score data test  : 0.75
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tugas4.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tugas6.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">4. Algoritma K-Means</p>
+            <p class="prev-next-title">6. Decision Tree</p>
         </div>
     </a>
 </div>

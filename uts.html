@@ -521,7 +521,7 @@ memory usage: 9.2 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-1723f09d-7b47-468e-8ff9-62db6a7b1c75">
+  <div id="df-a6f1191f-b321-40c9-8ea0-94b66d299dec">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -701,7 +701,7 @@ memory usage: 9.2 KB
 </table>
 <p>116 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-1723f09d-7b47-468e-8ff9-62db6a7b1c75')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a6f1191f-b321-40c9-8ea0-94b66d299dec')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -752,12 +752,12 @@ memory usage: 9.2 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-1723f09d-7b47-468e-8ff9-62db6a7b1c75 button.colab-df-convert');
+          document.querySelector('#df-a6f1191f-b321-40c9-8ea0-94b66d299dec button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-1723f09d-7b47-468e-8ff9-62db6a7b1c75');
+          const element = document.querySelector('#df-a6f1191f-b321-40c9-8ea0-94b66d299dec');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -862,6 +862,82 @@ Score data test   : 0.7083333333333334
 </div>
 </div>
 </div>
+<p>Grafik menggunakan matplotlib</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import the KNeighborsClassifier class from sklearn</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="c1">#import metrics model to check the accuracy </span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="c1">#Try running from k=3 through 25 and record testing accuracy</span>
+<span class="n">k_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">scores_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_range</span><span class="p">:</span>
+        <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+        <span class="n">y_pred</span><span class="o">=</span><span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+        <span class="n">scores</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+        <span class="n">scores_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Testing accuracy for each value of K</span>
+<span class="n">scores</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{3: 0.5833333333333334,
+ 4: 0.625,
+ 5: 0.5416666666666666,
+ 6: 0.5416666666666666,
+ 7: 0.4583333333333333,
+ 8: 0.5,
+ 9: 0.4166666666666667,
+ 10: 0.4166666666666667,
+ 11: 0.5,
+ 12: 0.5416666666666666,
+ 13: 0.5,
+ 14: 0.4166666666666667,
+ 15: 0.5,
+ 16: 0.4583333333333333,
+ 17: 0.5,
+ 18: 0.5416666666666666,
+ 19: 0.5,
+ 20: 0.5416666666666666,
+ 21: 0.5416666666666666,
+ 22: 0.5416666666666666,
+ 23: 0.4166666666666667,
+ 24: 0.5416666666666666,
+ 25: 0.5416666666666666}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#plot the relationship between K and the testing accuracy</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k_range</span><span class="p">,</span><span class="n">scores_list</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Value of K for KNN&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Testing Accuracy&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
+</pre></div>
+</div>
+<img alt="_images/uts_20_1.png" src="_images/uts_20_1.png" />
+</div>
+</div>
 <p>Dari hasil yang tertera, dapat diketahui bahwa dengan menggunakan Metode KNN saat train data mendapatkan score sekitar 80%, tetapi saat test data scorenya menurun.</p>
 </section>
 <hr class="docutils" />
@@ -890,7 +966,7 @@ Score data test   : 0.7083333333333334
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/uts_21_0.png" src="_images/uts_21_0.png" />
+<img alt="_images/uts_25_0.png" src="_images/uts_25_0.png" />
 </div>
 </div>
 <p>Menghitung akurasi dari model Decision Tree</p>
@@ -903,7 +979,7 @@ Score data test   : 0.7083333333333334
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Score data train : 1.0
-Score data test  : 0.7083333333333334
+Score data test  : 0.75
 </pre></div>
 </div>
 </div>

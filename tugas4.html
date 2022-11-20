@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Naive Bayes Classifier" href="tugas5.html" />
+    <link rel="prev" title="3. K-Nearest Neighbor" href="tugas3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,20 +113,40 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown Files
+  <a class="reference internal" href="tugas1.html">
+   1. Statistik Deskriptif
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Content with notebooks
+  <a class="reference internal" href="tugas2.html">
+   2. Diskritisasi
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks.html">
-   Notebooks with MyST Markdown
+  <a class="reference internal" href="tugas3.html">
+   3. K-Nearest Neighbor
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. K-Means Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas5.html">
+   5. Naive Bayes Classifier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas6.html">
+   6. Decision Tree
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="uts.html">
+   Tugas UTS
   </a>
  </li>
 </ul>
@@ -360,7 +382,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9a4a4a29-847c-4cfb-a7bb-4df71411472e">
+  <div id="df-8e90a302-983e-4293-b647-825030daf2b6">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -431,7 +453,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9a4a4a29-847c-4cfb-a7bb-4df71411472e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8e90a302-983e-4293-b647-825030daf2b6')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -482,12 +504,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9a4a4a29-847c-4cfb-a7bb-4df71411472e button.colab-df-convert');
+          document.querySelector('#df-8e90a302-983e-4293-b647-825030daf2b6 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9a4a4a29-847c-4cfb-a7bb-4df71411472e');
+          const element = document.querySelector('#df-8e90a302-983e-4293-b647-825030daf2b6');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -567,11 +589,11 @@ title="Print to PDF"
 
     Iris-setosa       0.00      0.00      0.00        50
 Iris-versicolor       0.00      0.00      0.00        50
- Iris-virginica       0.95      0.72      0.82        50
+ Iris-virginica       0.23      0.28      0.25        50
 
-       accuracy                           0.24       150
-      macro avg       0.32      0.24      0.27       150
-   weighted avg       0.32      0.24      0.27       150
+       accuracy                           0.09       150
+      macro avg       0.08      0.09      0.08       150
+   weighted avg       0.08      0.09      0.08       150
 </pre></div>
 </div>
 </div>
@@ -585,11 +607,11 @@ Iris-versicolor       0.00      0.00      0.00        50
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 2, 2, 2, 0, 2, 2, 2,
-       2, 2, 2, 0, 0, 2, 2, 2, 2, 0, 2, 0, 2, 0, 2, 2, 0, 0, 2, 2, 2, 2,
-       2, 0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 0], dtype=int32)
+       1, 1, 1, 1, 1, 1, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0,
+       0, 0, 0, 2, 2, 0, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 2, 2, 0, 0, 0, 0,
+       0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2], dtype=int32)
 </pre></div>
 </div>
 </div>
@@ -623,6 +645,20 @@ Iris-versicolor       0.00      0.00      0.00        50
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="tugas3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">3. K-Nearest Neighbor</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tugas5.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5. Naive Bayes Classifier</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

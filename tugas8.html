@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>8. Ensemble Bagging &#8212; Yoga Tirta Permana</title>
+    <title>8. Ensemble Learning (Bagging) &#8212; Yoga Tirta Permana</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -119,37 +119,58 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tugas1.html">
-   1. Statistik Deskriptif
+   <strong>
+    1.
+   </strong>
+   Statistik Deskriptif
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas2.html">
-   2. Diskritisasi
+   <strong>
+    2.
+   </strong>
+   Diskritisasi
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas3.html">
-   3. K-Nearest Neighbor
+   <strong>
+    3.
+   </strong>
+   K-Nearest Neighbor
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas4.html">
-   4. K-Means Clustering
+   <strong>
+    4.
+   </strong>
+   K-Means Clustering
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas5.html">
-   5. Naive Bayes Classifier
+   <strong>
+    5.
+   </strong>
+   Naive Bayes Classifier
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas6.html">
-   6. Decision Tree
+   <strong>
+    6.
+   </strong>
+   Decision Tree
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas7.html">
-   7. Diabetic Retinopathy
+   <strong>
+    7.
+   </strong>
+   Diabetic Retinopathy
   </a>
  </li>
 </ul>
@@ -161,7 +182,9 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="uts.html">
-   Tugas UTS
+   <strong>
+    Tugas UTS
+   </strong>
   </a>
  </li>
 </ul>
@@ -384,7 +407,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>8. Ensemble Bagging</h1>
+                <h1>8. Ensemble Learning (Bagging)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -409,8 +432,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="ensemble-bagging">
-<h1>8. Ensemble Bagging<a class="headerlink" href="#ensemble-bagging" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ensemble-learning-bagging">
+<h1><strong>8.</strong> Ensemble Learning (Bagging)<a class="headerlink" href="#ensemble-learning-bagging" title="Permalink to this headline">#</a></h1>
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -447,7 +470,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-563cef58-4256-4299-9366-43f469f7cfde">
+  <div id="df-e5dd582f-46c0-4f29-aa78-848871756919">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -747,7 +770,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-563cef58-4256-4299-9366-43f469f7cfde')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e5dd582f-46c0-4f29-aa78-848871756919')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -798,12 +821,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-563cef58-4256-4299-9366-43f469f7cfde button.colab-df-convert');
+          document.querySelector('#df-e5dd582f-46c0-4f29-aa78-848871756919 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-563cef58-4256-4299-9366-43f469f7cfde');
+          const element = document.querySelector('#df-e5dd582f-46c0-4f29-aa78-848871756919');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -857,7 +880,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f25a7a8a-d630-4a58-a457-42c0a15a243b">
+  <div id="df-8872e886-e0bf-46e4-a3a3-f57ab942b6ea">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1157,7 +1180,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f25a7a8a-d630-4a58-a457-42c0a15a243b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8872e886-e0bf-46e4-a3a3-f57ab942b6ea')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1208,12 +1231,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f25a7a8a-d630-4a58-a457-42c0a15a243b button.colab-df-convert');
+          document.querySelector('#df-8872e886-e0bf-46e4-a3a3-f57ab942b6ea button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f25a7a8a-d630-4a58-a457-42c0a15a243b');
+          const element = document.querySelector('#df-8872e886-e0bf-46e4-a3a3-f57ab942b6ea');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});

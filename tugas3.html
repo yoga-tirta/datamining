@@ -121,37 +121,58 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tugas1.html">
-   1. Statistik Deskriptif
+   <strong>
+    1.
+   </strong>
+   Statistik Deskriptif
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas2.html">
-   2. Diskritisasi
+   <strong>
+    2.
+   </strong>
+   Diskritisasi
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. K-Nearest Neighbor
+   <strong>
+    3.
+   </strong>
+   K-Nearest Neighbor
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas4.html">
-   4. K-Means Clustering
+   <strong>
+    4.
+   </strong>
+   K-Means Clustering
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas5.html">
-   5. Naive Bayes Classifier
+   <strong>
+    5.
+   </strong>
+   Naive Bayes Classifier
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas6.html">
-   6. Decision Tree
+   <strong>
+    6.
+   </strong>
+   Decision Tree
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas7.html">
-   7. Diabetic Retinopathy
+   <strong>
+    7.
+   </strong>
+   Diabetic Retinopathy
   </a>
  </li>
 </ul>
@@ -163,7 +184,9 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="uts.html">
-   Tugas UTS
+   <strong>
+    Tugas UTS
+   </strong>
   </a>
  </li>
 </ul>
@@ -372,14 +395,29 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   3. K-Nearest Neighbor
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-dataset">
+   Load Dataset
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#train-the-model">
-   Train the model
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#split-data">
+   Split Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling">
+   Modelling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisasi-data">
+   Visualisasi Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-data-baru">
+   Testing Data Baru
   </a>
  </li>
 </ul>
@@ -401,14 +439,29 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   3. K-Nearest Neighbor
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-dataset">
+   Load Dataset
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#train-the-model">
-   Train the model
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#split-data">
+   Split Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling">
+   Modelling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisasi-data">
+   Visualisasi Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-data-baru">
+   Testing Data Baru
   </a>
  </li>
 </ul>
@@ -422,8 +475,15 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="k-nearest-neighbor">
-<h1>3. K-Nearest Neighbor<a class="headerlink" href="#k-nearest-neighbor" title="Permalink to this headline">#</a></h1>
+<h1><strong>3.</strong> K-Nearest Neighbor<a class="headerlink" href="#k-nearest-neighbor" title="Permalink to this headline">#</a></h1>
 <hr class="docutils" />
+<p align="justify">
+<p><strong>Algoritma K-Nearest Neighbor (KNN)</strong> adalah algoritma supervised learning yang paling sering digunakan dalam kasus klasifikasi. <strong>Algoritma KNN</strong> bekerja dengan cara mengambil sejumlah data <strong>K</strong> yang terdekat (tetangganya) sebagai acuan untuk menentukan kelas dari data baru. Algoritma ini mengklasifikasikan data berdasarkan similarity atau kemiripan atau kedekatannya terhadap data lainnya. Dalam KNN, data point yang berada berdekatan disebut <em>“neighbor”</em> atau <em>“tetangga”</em>.</p>
+</p><section id="load-dataset">
+<h2>Load Dataset<a class="headerlink" href="#load-dataset" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>Import Iris dataset dari sklearn</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -436,7 +496,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Mengambil dataset iris dan menampilkan type</p>
+<blockquote>
+<div><p>Mendeklarasikan dataset iris dan menampilkan type</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
@@ -450,10 +512,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<blockquote>
+<div><p>Menampilkan dataset Iris kedalam bentuk array</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Menampilkan data iris</span>
-<span class="n">iris</span><span class="o">.</span><span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span><span class="o">.</span><span class="n">data</span>
 </pre></div>
 </div>
 </div>
@@ -612,6 +676,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<blockquote>
+<div><p>Menampilkan 4 fitur yang terdapat pada dataset iris</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Menampilkan 4 fitur (column names)</span>
@@ -625,6 +692,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<blockquote>
+<div><p>Menampilkan bilangan integer yang mewakili spesies pada data iris yang terdiri dari 0 = setosa, 1 = versicolor, 2 = virginica</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Integers representing the species: 0 = setosa, 1=versicolor, 2=virginica</span>
@@ -642,6 +712,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<blockquote>
+<div><p>Menampilkan ke tiga nama spesies pada data iris</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3 classes of target</span>
@@ -669,6 +742,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<blockquote>
+<div><p>Menampilkan 150 baris data dan juga 4 kolom atribut yang dimiliki pada data iris</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we have a total of 150 observations and 4 features</span>
@@ -682,6 +758,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<blockquote>
+<div><p>Melakukan pendefinisian variable <em>x</em> dan <em>y</em></p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Feature matrix in a object named X</span>
@@ -707,9 +786,11 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="train-the-model">
-<h1>Train the model<a class="headerlink" href="#train-the-model" title="Permalink to this headline">#</a></h1>
-<p>Split data menjadi data Train dan data Test</p>
+<section id="split-data">
+<h2>Split Data<a class="headerlink" href="#split-data" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>Kita bagi menjadi data Train dan data Test</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># splitting the data into training and test sets (80:20)</span>
@@ -749,6 +830,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="modelling">
+<h2>Modelling<a class="headerlink" href="#modelling" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>Melakukan Import library <em>KNeighborsClassifier</em> dari sklearn dan import model matriks untuk mengecek tingkat keakuratannya.</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import the KNeighborsClassifier class from sklearn</span>
@@ -756,7 +843,16 @@ title="Print to PDF"
 
 <span class="c1">#import metrics model to check the accuracy </span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
-<span class="c1">#Try running from k=1 through 25 and record testing accuracy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>Melakukan percobaan untuk jalankan dari k = 1 hingga 25 dan catat akurasi pengujian</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Try running from k=1 through 25 and record testing accuracy</span>
 <span class="n">k_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">scores_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -770,6 +866,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<blockquote>
+<div><p>Testing akurasi untuk tiap nilai dari K</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Testing accuracy for each value of K</span>
@@ -807,6 +906,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="visualisasi-data">
+<h2>Visualisasi Data<a class="headerlink" href="#visualisasi-data" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>Menampilkan plot antara K dan akurasi testing</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -823,7 +928,7 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
 </pre></div>
 </div>
-<img alt="_images/tugas3_18_1.png" src="_images/tugas3_18_1.png" />
+<img alt="_images/tugas3_32_1.png" src="_images/tugas3_32_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -839,6 +944,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="testing-data-baru">
+<h2>Testing Data Baru<a class="headerlink" href="#testing-data-baru" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>Melakukan percobaan data baru untuk mencari spesies yang di sesuaikan dengan data baru yang telah di inputkan</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#0 = setosa, 1=versicolor, 2=virginica</span>
@@ -850,18 +961,19 @@ title="Print to PDF"
          <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x_new</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">0</span><span class="p">]]])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x_new</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">1</span><span class="p">]]])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>versicolor
-setosa
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3, 4, 5, 2], &#39;versicolor&#39;]
+[[5, 4, 2, 2], &#39;setosa&#39;]
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -895,13 +1007,13 @@ setosa
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">2. Diskritisasi</p>
+            <p class="prev-next-title"><strong>2.</strong> Diskritisasi</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="tugas4.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">4. K-Means Clustering</p>
+        <p class="prev-next-title"><strong>4.</strong> K-Means Clustering</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

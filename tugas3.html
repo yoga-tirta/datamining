@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. K-Nearest Neighbor &#8212; Data Mining Project</title>
+    <title>3. K-Nearest Neighbor &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Naive Bayes" href="tugas4.html" />
-    <link rel="prev" title="2. Diskritisasi" href="tugas2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,7 +95,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Data Mining Project</h1>
+      <h1 class="site-logo" id="site-title">My sample book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -109,44 +107,24 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Introduction
+                    Welcome to your Jupyter Book
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas1.html">
-   1. Statistik Deskriptif
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas2.html">
-   2. Diskritisasi
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. K-Nearest Neighbor
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas4.html">
-   4. Naive Bayes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas5.html">
-   5. K-Means Clustering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas6.html">
-   6. Decision Tree
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="uts.html">
-   Tugas UTS
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
   </a>
  </li>
 </ul>
@@ -208,19 +186,19 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/drive/1XgOJxyXibAUEmK0of43c9ks4Wk2GdU1t#scrollTo=8x8JM1_KGpiH/github/yoga-tirta/datamining/blob/master/docs/tugas3.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/tugas3.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
-title="Launch on Colab"
+title="Launch on Binder"
 >
   
 
 <span class="headerbtn__icon-container">
   
-    <img src="_static/images/logo_colab.png">
+    <img src="_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="headerbtn__text-container">Binder</span>
 </a>
 
       </li>
@@ -251,7 +229,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/yoga-tirta/datamining"
+        <a href="https://github.com/executablebooks/jupyter-book"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -268,7 +246,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/yoga-tirta/datamining/issues/new?title=Issue%20on%20page%20%2Ftugas3.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas3.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -409,43 +387,21 @@ title="Print to PDF"
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data in a csv format, each observation has a 4 measurements/features </span>
-<span class="c1"># and the species type.</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
-<span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="400"
-    height="200"
-    src="http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
-    frameborder="0"
-    allowfullscreen
-></iframe>
-</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import the load_iris function from datsets module</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># import dataset iris dari sklearn</span>
 <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Mengambil dataset iris dan menampilkan type</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create bunch object containing iris dataset and its attributes.</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -457,7 +413,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Print the iris data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Menampilkan data iris</span>
 <span class="n">iris</span><span class="o">.</span><span class="n">data</span>
 </pre></div>
 </div>
@@ -619,7 +575,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Names of 4 features (column names)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Menampilkan 4 fitur (column names)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -714,6 +670,7 @@ title="Print to PDF"
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="train-the-model">
 <h1>Train the model<a class="headerlink" href="#train-the-model" title="Permalink to this headline">#</a></h1>
+<p>Split data menjadi data Train dan data Test</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># splitting the data into training and test sets (80:20)</span>
@@ -827,7 +784,7 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
 </pre></div>
 </div>
-<img alt="_images/tugas3_19_1.png" src="_images/tugas3_19_1.png" />
+<img alt="_images/tugas3_18_1.png" src="_images/tugas3_18_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -895,20 +852,6 @@ setosa
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tugas2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">2. Diskritisasi</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="tugas4.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">4. Naive Bayes</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
@@ -916,7 +859,7 @@ setosa
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Yoga Tirta<br/>
+    By The Jupyter Book Community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

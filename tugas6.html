@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Decision Tree &#8212; Data Mining Project</title>
+    <title>6. Decision Tree &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas UTS" href="uts.html" />
-    <link rel="prev" title="5. K-Means Clustering" href="tugas5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,7 +95,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Data Mining Project</h1>
+      <h1 class="site-logo" id="site-title">My sample book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -109,44 +107,24 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Introduction
+                    Welcome to your Jupyter Book
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas1.html">
-   1. Statistik Deskriptif
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas2.html">
-   2. Diskritisasi
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas3.html">
-   3. K-Nearest Neighbor
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas4.html">
-   4. Naive Bayes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas5.html">
-   5. K-Means Clustering
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   6. Decision Tree
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="uts.html">
-   Tugas UTS
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
   </a>
  </li>
 </ul>
@@ -208,19 +186,19 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/drive/1XgOJxyXibAUEmK0of43c9ks4Wk2GdU1t#scrollTo=8x8JM1_KGpiH/github/yoga-tirta/datamining/blob/master/docs/tugas6.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/tugas6.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
-title="Launch on Colab"
+title="Launch on Binder"
 >
   
 
 <span class="headerbtn__icon-container">
   
-    <img src="_static/images/logo_colab.png">
+    <img src="_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="headerbtn__text-container">Binder</span>
 </a>
 
       </li>
@@ -251,7 +229,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/yoga-tirta/datamining"
+        <a href="https://github.com/executablebooks/jupyter-book"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -268,7 +246,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/yoga-tirta/datamining/issues/new?title=Issue%20on%20page%20%2Ftugas6.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas6.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -379,7 +357,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d32416c4-3ab7-4013-a969-681f107a8871">
+  <div id="df-2133f74f-b555-4ee4-8e92-e471c74b3e86">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -499,7 +477,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d32416c4-3ab7-4013-a969-681f107a8871')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2133f74f-b555-4ee4-8e92-e471c74b3e86')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -550,12 +528,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d32416c4-3ab7-4013-a969-681f107a8871 button.colab-df-convert');
+          document.querySelector('#df-2133f74f-b555-4ee4-8e92-e471c74b3e86 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d32416c4-3ab7-4013-a969-681f107a8871');
+          const element = document.querySelector('#df-2133f74f-b555-4ee4-8e92-e471c74b3e86');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -648,7 +626,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-be040ec7-c5ee-4c22-82da-e4d0802b188b">
+  <div id="df-ee899f84-3157-46d9-8f3a-3f0f57d01cd9">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -826,7 +804,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-be040ec7-c5ee-4c22-82da-e4d0802b188b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ee899f84-3157-46d9-8f3a-3f0f57d01cd9')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -877,12 +855,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-be040ec7-c5ee-4c22-82da-e4d0802b188b button.colab-df-convert');
+          document.querySelector('#df-ee899f84-3157-46d9-8f3a-3f0f57d01cd9 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-be040ec7-c5ee-4c22-82da-e4d0802b188b');
+          const element = document.querySelector('#df-ee899f84-3157-46d9-8f3a-3f0f57d01cd9');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -954,20 +932,6 @@ dari data prediksi 29 / 30 * 100% = 96.67%
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tugas5.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">5. K-Means Clustering</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="uts.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas UTS</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
@@ -975,7 +939,7 @@ dari data prediksi 29 / 30 * 100% = 96.67%
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Yoga Tirta<br/>
+    By The Jupyter Book Community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tugas UTS &#8212; Data Mining Project</title>
+    <title>Tugas UTS &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="6. Decision Tree" href="tugas6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,7 +95,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Data Mining Project</h1>
+      <h1 class="site-logo" id="site-title">My sample book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,44 +107,24 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Introduction
+                    Welcome to your Jupyter Book
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas1.html">
-   1. Statistik Deskriptif
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas2.html">
-   2. Diskritisasi
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas3.html">
-   3. K-Nearest Neighbor
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas4.html">
-   4. Naive Bayes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas5.html">
-   5. K-Means Clustering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas6.html">
-   6. Decision Tree
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Tugas UTS
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
   </a>
  </li>
 </ul>
@@ -207,19 +186,19 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/drive/1XgOJxyXibAUEmK0of43c9ks4Wk2GdU1t#scrollTo=8x8JM1_KGpiH/github/yoga-tirta/datamining/blob/master/docs/uts.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/uts.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
-title="Launch on Colab"
+title="Launch on Binder"
 >
   
 
 <span class="headerbtn__icon-container">
   
-    <img src="_static/images/logo_colab.png">
+    <img src="_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="headerbtn__text-container">Binder</span>
 </a>
 
       </li>
@@ -250,7 +229,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/yoga-tirta/datamining"
+        <a href="https://github.com/executablebooks/jupyter-book"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -267,7 +246,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/yoga-tirta/datamining/issues/new?title=Issue%20on%20page%20%2Futs.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Futs.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -521,7 +500,7 @@ memory usage: 9.2 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a6f1191f-b321-40c9-8ea0-94b66d299dec">
+  <div id="df-d6b3170f-0206-4b0a-be35-6cd2934f2e4a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -701,7 +680,7 @@ memory usage: 9.2 KB
 </table>
 <p>116 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a6f1191f-b321-40c9-8ea0-94b66d299dec')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d6b3170f-0206-4b0a-be35-6cd2934f2e4a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -752,12 +731,12 @@ memory usage: 9.2 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a6f1191f-b321-40c9-8ea0-94b66d299dec button.colab-df-convert');
+          document.querySelector('#df-d6b3170f-0206-4b0a-be35-6cd2934f2e4a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a6f1191f-b321-40c9-8ea0-94b66d299dec');
+          const element = document.querySelector('#df-d6b3170f-0206-4b0a-be35-6cd2934f2e4a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -979,7 +958,7 @@ Score data test   : 0.7083333333333334
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Score data train : 1.0
-Score data test  : 0.75
+Score data test  : 0.625
 </pre></div>
 </div>
 </div>
@@ -1014,13 +993,6 @@ Score data test  : 0.75
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tugas6.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">6. Decision Tree</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>
@@ -1028,7 +1000,7 @@ Score data test  : 0.75
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Yoga Tirta<br/>
+    By The Jupyter Book Community<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

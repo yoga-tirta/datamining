@@ -175,6 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
    Diabetic Retinopathy
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas8.html">
+   <strong>
+    8.
+   </strong>
+   Ensemble Learning (Bagging)
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -510,7 +518,7 @@ Decision tree merupakan suatu struktur yang digunakan untuk membantu proses peng
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-93e87e80-4212-47b1-8ae4-31457792b50c">
+  <div id="df-e009ad9b-fd76-4c1f-8e5d-337cbbec2f95">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -630,7 +638,7 @@ Decision tree merupakan suatu struktur yang digunakan untuk membantu proses peng
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-93e87e80-4212-47b1-8ae4-31457792b50c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e009ad9b-fd76-4c1f-8e5d-337cbbec2f95')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -681,12 +689,12 @@ Decision tree merupakan suatu struktur yang digunakan untuk membantu proses peng
 
       <script>
         const buttonEl =
-          document.querySelector('#df-93e87e80-4212-47b1-8ae4-31457792b50c button.colab-df-convert');
+          document.querySelector('#df-e009ad9b-fd76-4c1f-8e5d-337cbbec2f95 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-93e87e80-4212-47b1-8ae4-31457792b50c');
+          const element = document.querySelector('#df-e009ad9b-fd76-4c1f-8e5d-337cbbec2f95');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -794,7 +802,7 @@ Decision tree merupakan suatu struktur yang digunakan untuk membantu proses peng
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a80e83b7-7b3b-4eed-b478-59094b527de7">
+  <div id="df-f2eb44c1-bf4a-412d-92c3-6a62187d3630">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -972,7 +980,7 @@ Decision tree merupakan suatu struktur yang digunakan untuk membantu proses peng
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a80e83b7-7b3b-4eed-b478-59094b527de7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f2eb44c1-bf4a-412d-92c3-6a62187d3630')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1023,12 +1031,12 @@ Decision tree merupakan suatu struktur yang digunakan untuk membantu proses peng
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a80e83b7-7b3b-4eed-b478-59094b527de7 button.colab-df-convert');
+          document.querySelector('#df-f2eb44c1-bf4a-412d-92c3-6a62187d3630 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a80e83b7-7b3b-4eed-b478-59094b527de7');
+          const element = document.querySelector('#df-f2eb44c1-bf4a-412d-92c3-6a62187d3630');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1065,14 +1073,14 @@ Decision tree merupakan suatu struktur yang digunakan untuk membantu proses peng
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;acuraty = </span><span class="si">{</span><span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predic</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dari data prediksi </span><span class="si">{</span><span class="n">correct</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="n">data_predic</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> * 100% = </span><span class="si">{</span><span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">correct</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">data_predic</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="si">}</span><span class="s1">%&#39;</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Akurasi = </span><span class="si">{</span><span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predic</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Dari data prediksi </span><span class="si">{</span><span class="n">correct</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="n">data_predic</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> * 100% = </span><span class="si">{</span><span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">correct</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">data_predic</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="si">}</span><span class="s1">%&#39;</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuraty = 96.67%
-dari data prediksi 29 / 30 * 100% = 96.67%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi = 96.67%
+Dari data prediksi 29 / 30 * 100% = 96.67%
 </pre></div>
 </div>
 </div>
